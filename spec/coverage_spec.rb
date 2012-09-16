@@ -18,7 +18,7 @@ describe 'coverage' do
     ].each do |dir|
       Dir.glob( File.join( Rails.root, dir, '**' ) ) do |path|
         next if File.directory?( path )
-        path.should have_a_spec
+        path.sub!( /#{Rails.root}\//, '' ).should have_a_spec
       end
     end
   end

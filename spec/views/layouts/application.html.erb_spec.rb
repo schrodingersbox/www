@@ -6,4 +6,9 @@ describe '/layouts/application.html.erb' do
     render
   end
 
+  it 'includes a title tag' do
+    render
+    rendered.should have_selector( :title, :content => t( :title, :scope => :application )  )
+  end
+
 end
