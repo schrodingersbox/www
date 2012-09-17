@@ -4,3 +4,7 @@
 en:
   application:
     title: "Schrodinger's Box"
+
+  root:
+    index:
+      h1: "Welcome to Schrodinger's Box"

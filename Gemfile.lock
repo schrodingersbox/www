@@ -1,5 +1,6 @@
-PATH
-  remote: ~/schrodingersbox/spec-cat
+GIT
+  remote: https://github.com/schrodingersbox/spec-cat.git
+  revision: 0180a7bc8d22eadacaebbed5d983ce530c3f2bd3
   specs:
     spec-cat (0.0.1)
 

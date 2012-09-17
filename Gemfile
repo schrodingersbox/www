@@ -19,7 +19,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'simplecov', '0.6.4', :require => false
-  gem 'spec-cat', :path => '~/schrodingersbox/spec-cat'
+  gem 'spec-cat', :git => 'https://github.com/schrodingersbox/spec-cat.git'
   gem 'webrat', '0.7.3'
 end
 
