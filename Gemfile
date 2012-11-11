@@ -4,6 +4,10 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'jquery-rails'
 
+gem 'status-cat', '0.0.1', :git => 'https://github.com/schrodingersbox/status-cat.git'
+
+gem 'newrelic_rpm'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,7 +27,6 @@ group :development, :test do
   gem 'webrat', '0.7.3'
 end
 
-gem 'status-cat', '0.0.1', :git => 'https://github.com/schrodingersbox/status-cat.git'
 
 
 # To use ActiveModel has_secure_password
