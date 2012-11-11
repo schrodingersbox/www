@@ -48,6 +48,8 @@ Www::Application.routes.draw do
 
   root :to => 'root#index'
 
+  mount StatusCat::Engine => '/status-cat'
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

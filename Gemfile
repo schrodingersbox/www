@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.8'
 gem 'sqlite3'
 gem 'jquery-rails'
 
@@ -19,9 +19,11 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'simplecov', '0.6.4', :require => false
-  gem 'spec-cat', '0.0.3', :git => 'https://github.com/schrodingersbox/spec-cat.git'
+  gem 'spec-cat', '0.0.9', :git => 'https://github.com/schrodingersbox/spec-cat.git'
   gem 'webrat', '0.7.3'
 end
+
+gem 'status-cat', '0.0.1', :git => 'https://github.com/schrodingersbox/status-cat.git'
 
 
 # To use ActiveModel has_secure_password
