@@ -15,7 +15,6 @@
 
 # Ignore the live config files
 /config/database.yml
-/config/newrelic.yml
 
 # Ignore SimpleCov output
 /coverage

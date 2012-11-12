@@ -6,7 +6,9 @@ gem 'jquery-rails'
 
 gem 'status-cat', '0.0.1', :git => 'https://github.com/schrodingersbox/status-cat.git'
 
-gem 'newrelic_rpm'
+group :production do
+  gem 'newrelic_rpm'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
