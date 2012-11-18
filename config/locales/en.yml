@@ -3,8 +3,10 @@
 
 en:
   application:
-    title: "Schrodinger's Box"
+    title: "Schrödinger's Box"
 
   root:
     index:
-      h1: "Welcome to Schrodinger's Box"
+      welcome: "Welcome to Schrödinger's Box"
+      spec_cat: "Spec-Cat"
+      status_cat: "Status-Cat"

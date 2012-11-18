@@ -11,3 +11,23 @@
  *= require_self
  *= require_tree .
 */
+
+
+#header {
+    border-bottom: 1px solid #cacaca;
+}
+
+#header span {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.container {
+    width: 920px;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 49px;
+    height: 40px;
+}

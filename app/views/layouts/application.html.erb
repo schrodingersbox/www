@@ -6,7 +6,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <%= yield %>
+    <div id="header">
+      <div class="container">
+        <%= image_tag 'logo.png', :id =>'logo'  %>
+        <span><%= t( :title, :scope => :application ) %></span>
+      </div>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
 </body>
 </html>
