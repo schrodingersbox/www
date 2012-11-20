@@ -2,19 +2,30 @@
 <html>
 <head>
   <title><%= t( :title, :scope => :application ) %></title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag 'application', :media => 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
     <div id="header">
       <div class="container">
-        <%= image_tag 'logo.png', :id =>'logo'  %>
-        <span><%= t( :title, :scope => :application ) %></span>
+        <%= image_tag 'logo.png', :id =>'logo', :class => 'clear' %>
+        <div class="block">
+          <span id="title"><%= t( :title, :scope => :application ) %></span>
+          <span id="tag"><%= t( :tag, :scope => :application ) %></span>
+        </div>
+      </div>
+      <br class="clear"/>
+    </div>
+    <div id="page">
+      <div class="container">
+        <%= yield %>
       </div>
     </div>
-    <div class="container">
-      <%= yield %>
+    <div id="footer">
+      <div class="container">
+        <span><%= t( :copyright_html, :scope => :application, :year => Date.today.year ) %></span>
+      </div>
     </div>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'application' %>
 </body>
 </html>

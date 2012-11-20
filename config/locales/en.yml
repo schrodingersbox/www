@@ -4,9 +4,12 @@
 en:
   application:
     title: "Schrödinger's Box"
+    tag: "No peeking!"
+    copyright_html: "&copy; %{year} Schrödinger's Box. All rights reserved."
 
   root:
     index:
-      welcome: "Welcome to Schrödinger's Box"
+      github: "GitHub"
       spec_cat: "Spec-Cat"
       status_cat: "Status-Cat"
+      welcome: "Welcome to Schrödinger's Box"
