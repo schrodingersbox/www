@@ -1,13 +1,15 @@
 <h1><%= t( :welcome, :scope => [ :root, :index ] ) %></h1>
 
-<h2><%=  t( :spec_cat, :scope => [ :root, :index ] ) %></h2>
+<h2><%=  t( :title, :scope => [ :root, :index, :spec_cat ] ) %></h2>
+<p><%=  t( :description, :scope => [ :root, :index, :spec_cat ] ) %></p>
 <ul>
   <li>
     <a href="https://github.com/schrodingersbox/spec-cat"><%=  t( :github, :scope => [ :root, :index ] ) %></a>
   </li>
 </ul>
 
-<h2><%=  t( :status_cat, :scope => [ :root, :index ] ) %></h2>
+<h2><%=  t( :title, :scope => [ :root, :index, :status_cat ] ) %></h2>
+<p><%=  t( :description, :scope => [ :root, :index, :status_cat ] ) %></p>
 <ul>
   <li>
     <a href="https://github.com/schrodingersbox/status-cat"><%=  t( :github, :scope => [ :root, :index ] ) %></a>

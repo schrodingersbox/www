@@ -10,6 +10,10 @@ en:
   root:
     index:
       github: "GitHub"
-      spec_cat: "Spec-Cat"
-      status_cat: "Status-Cat"
-      welcome: "Welcome to Schrödinger's Box"
+      spec_cat:
+        title: "Spec-Cat"
+        description: "A Ruby gem with rspec helpers and matchers"
+      status_cat:
+        title: "Status-Cat"
+        description: "A Rails engine for checking system status"
+      welcome: "Welcome"
