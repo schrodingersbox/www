@@ -10,6 +10,7 @@ en:
   root:
     index:
       github: "GitHub"
+      demo: "Demo"
       spec_cat:
         title: "Spec-Cat"
         description: "A Ruby gem with rspec helpers and matchers"

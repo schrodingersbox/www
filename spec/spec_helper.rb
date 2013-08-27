@@ -38,6 +38,9 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 
+  # http://stackoverflow.com/questions/9475857/rspec-and-named-routes
+  config.include Rails.application.routes.url_helpers
+
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
