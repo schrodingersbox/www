@@ -1,29 +1,30 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+gem 'rails', '4.0.0'
 gem 'pg'
 gem 'jquery-rails'
 
-gem 'status-cat', '0.0.2', :git => 'https://github.com/schrodingersbox/status-cat.git'
+gem 'status-cat', '0.0.3', :git => 'https://github.com/schrodingersbox/status-cat.git'
 
 group :production do
   gem 'newrelic_rpm'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-  gem 'uglifier', '>= 1.0.3'
-end
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
 
 group :development, :test do
-  gem 'rspec-rails', '2.11.0'
+  gem 'rspec', '2.14.1'
+  gem 'rspec-rails', '2.14.0'
   gem 'simplecov', '0.6.4', :require => false
   gem 'spec-cat', '0.0.9', :git => 'https://github.com/schrodingersbox/spec-cat.git'
   gem 'webrat', '0.7.3'
