@@ -9,6 +9,7 @@ gem 'status-cat', '0.0.3', :git => 'https://github.com/schrodingersbox/status-ca
 
 group :production do
   gem 'newrelic_rpm'
+  gem 'rails_12factor'
 end
 
 # Use SCSS for stylesheets
