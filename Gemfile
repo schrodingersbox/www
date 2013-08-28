@@ -4,7 +4,7 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'jquery-rails'
 
-gem 'status-cat', '0.0.1', :git => 'https://github.com/schrodingersbox/status-cat.git'
+gem 'status-cat', '0.0.2', :git => 'https://github.com/schrodingersbox/status-cat.git'
 
 group :production do
   gem 'newrelic_rpm'

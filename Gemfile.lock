@@ -6,10 +6,10 @@ GIT
 
 GIT
   remote: https://github.com/schrodingersbox/status-cat.git
-  revision: 2138ca6a1e1017f070b22d6a060620413eb0711f
+  revision: 804c6c6e7f261190eeee3b9d592f6e6bb6da9387
   specs:
-    status-cat (0.0.1)
-      rails (~> 3.2.8)
+    status-cat (0.0.2)
+      rails (= 3.2.14)
 
 GEM
   remote: https://rubygems.org/
@@ -149,6 +149,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simplecov (= 0.6.4)
   spec-cat (= 0.0.9)!
-  status-cat (= 0.0.1)!
+  status-cat (= 0.0.2)!
   uglifier (>= 1.0.3)
   webrat (= 0.7.3)
