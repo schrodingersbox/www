@@ -17,6 +17,7 @@ describe 'coverage' do
       'lib'
     ].each do |dir|
       Dir.glob( File.join( Rails.root, dir, '**', '*.{rb,erb}' ) ) do |path|
+        next if File.basename( path ) =~ /^_/
         path.sub!( /#{Rails.root}\//, '' ).should have_a_spec
       end
     end
