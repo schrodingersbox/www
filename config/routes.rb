@@ -48,7 +48,8 @@ Www::Application.routes.draw do
 
   root :to => 'root#index'
 
-  mount StatusCat::Engine => '/status-cat'
+  mount StatusCat::Engine => '/status_cat'
+  mount MeterCat::Engine => '/meter_cat'
 
   # See how all your routes lay out with "rake routes"
 

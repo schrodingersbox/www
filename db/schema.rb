@@ -9,8 +9,21 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(version: 20130908055849) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "meter_cat_meters", force: true do |t|
+    t.string   "name",         limit: 64,             null: false
+    t.date     "created_on"
+    t.integer  "value",                   default: 0
+    t.integer  "lock_version",            default: 0
+    t.datetime "created_at"
+  end
+
+  add_index "meter_cat_meters", ["created_on", "name"], name: "index_meter_cat_meters_on_created_on_and_name", unique: true, using: :btree
 
 end

@@ -11,10 +11,13 @@ en:
     index:
       github: "GitHub"
       demo: "Demo"
+      meter_cat:
+        title: "MeterCat"
+        description: "A Rails engine for monitoring system activities over time"
       spec_cat:
-        title: "Spec-Cat"
+        title: "SpecCat"
         description: "A Ruby gem with rspec helpers and matchers"
       status_cat:
-        title: "Status-Cat"
+        title: "StatusCat"
         description: "A Rails engine for checking system status"
       welcome: "Welcome"

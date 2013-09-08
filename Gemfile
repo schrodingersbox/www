@@ -6,6 +6,7 @@ gem 'pg'
 gem 'jquery-rails'
 
 gem 'status_cat', :tag => 'v0.0.4', :git => 'https://github.com/schrodingersbox/status_cat.git'
+gem 'meter_cat', :tag => 'v0.0.2', :git => 'https://github.com/schrodingersbox/meter_cat.git'
 
 group :production do
   gem 'newrelic_rpm'
