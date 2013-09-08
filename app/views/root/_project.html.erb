@@ -1,0 +1,18 @@
+<h2><%=  t( :title, :scope => [ :projects, name ] ) %></h2>
+<p><%=  t( :description, :scope => [ :projects, name ] ) %></p>
+<ul>
+
+  <% if github %>
+      <li>
+        <%= link_to t( :github, :scope => [ :root, :index ] ), github %>
+      </li>
+  <% end %>
+
+
+  <% if demo %>
+      <li>
+        <%= link_to t( :demo, :scope => [ :root, :index ] ), demo %>
+      </li>
+  <% end %>
+
+</ul>

@@ -1,33 +1,7 @@
-<h1><%= t( :welcome, :scope => [ :root, :index ] ) %></h1>
+<%= root_project( :spec_cat, SPEC_CAT_GITHUB_URL ) %>
+<%= root_project( :status_cat, STATUS_CAT_GITHUB_URL, status_cat_path ) %>
+<%= root_project( :meter_cat, METER_CAT_GITHUB_URL, meter_cat_path ) %>
 
-<h2><%=  t( :title, :scope => [ :root, :index, :spec_cat ] ) %></h2>
-<p><%=  t( :description, :scope => [ :root, :index, :spec_cat ] ) %></p>
-<ul>
-  <li>
-    <%= link_to t( :github, :scope => [ :root, :index ] ), SPEC_CAT_GITHUB_URL %>
-  </li>
-</ul>
 
-<h2><%=  t( :title, :scope => [ :root, :index, :status_cat ] ) %></h2>
-<p><%=  t( :description, :scope => [ :root, :index, :status_cat ] ) %></p>
-<ul>
-  <li>
-    <%= link_to t( :github, :scope => [ :root, :index ] ), STATUS_CAT_GITHUB_URL %>
-  </li>
-  <li>
-    <%= link_to t( :demo, :scope => [ :root, :index ] ), status_cat_path %>
-  </li>
-</ul>
-
-<h2><%=  t( :title, :scope => [ :root, :index, :meter_cat ] ) %></h2>
-<p><%=  t( :description, :scope => [ :root, :index, :meter_cat ] ) %></p>
-<ul>
-  <li>
-    <%= link_to t( :github, :scope => [ :root, :index ] ), METER_CAT_GITHUB_URL %>
-  </li>
-  <li>
-    <%= link_to t( :demo, :scope => [ :root, :index ] ), meter_cat_path %>
-  </li>
-</ul>
 
 

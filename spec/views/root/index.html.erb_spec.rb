@@ -3,26 +3,21 @@ require 'spec_helper'
 describe 'root/index.html.erb' do
 
   before( :all ) do
-    @welcome = t( :welcome, :scope => [ :root, :index ] )
     @github = t( :github, :scope => [ :root, :index ] )
     @demo = t( :demo, :scope => [ :root, :index ] )
 
-    @spec_cat_title = t( :title, :scope => [ :root, :index, :spec_cat ] )
-    @spec_cat_description = t( :description, :scope => [ :root, :index, :spec_cat ] )
+    @spec_cat_title = t( :title, :scope => [ :projects, :spec_cat ] )
+    @spec_cat_description = t( :description, :scope => [ :projects, :spec_cat ] )
 
-    @status_cat_title = t( :title, :scope => [ :root, :index, :status_cat ] )
-    @status_cat_description = t( :description, :scope => [ :root, :index, :status_cat ] )
+    @status_cat_title = t( :title, :scope => [ :projects, :status_cat ] )
+    @status_cat_description = t( :description, :scope => [ :projects, :status_cat ] )
 
-    @meter_cat_title = t( :title, :scope => [ :root, :index, :meter_cat ] )
-    @meter_cat_description = t( :description, :scope => [ :root, :index, :meter_cat ] )
+    @meter_cat_title = t( :title, :scope => [ :projects, :meter_cat ] )
+    @meter_cat_description = t( :description, :scope => [ :projects, :meter_cat ] )
   end
 
   before( :each ) do
     render
-  end
-
-  it 'includes an h1 tag' do
-    rendered.should have_selector( :h1, :content => @welcome )
   end
 
   describe 'spec-cat div' do

@@ -4,20 +4,21 @@
 en:
   application:
     title: "Schrödinger's Box"
-    tag: "No peeking!"
+    tag: ""
     copyright_html: "&copy; %{year} Schrödinger's Box. All rights reserved."
 
   root:
     index:
       github: "GitHub"
       demo: "Demo"
-      meter_cat:
-        title: "MeterCat"
-        description: "A Rails engine for monitoring system activities over time"
-      spec_cat:
-        title: "SpecCat"
-        description: "A Ruby gem with rspec helpers and matchers"
-      status_cat:
-        title: "StatusCat"
-        description: "A Rails engine for checking system status"
-      welcome: "Welcome"
+
+  projects:
+    meter_cat:
+      title: "MeterCat"
+      description: "A Rails engine for monitoring system activities over time."
+    spec_cat:
+      title: "SpecCat"
+      description: "A Ruby gem with rspec helpers and matchers."
+    status_cat:
+      title: "StatusCat"
+      description: "A Rails engine for checking system status."
