@@ -47,5 +47,8 @@ module Www
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # http://www.erikminkel.com/2013/09/01/twitter-bootstrap-3-in-a-rails-4-application/
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end

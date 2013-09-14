@@ -4,7 +4,6 @@
 en:
   application:
     title: "Schrödinger's Box"
-    tag: ""
     copyright_html: "&copy; %{year} Schrödinger's Box. All rights reserved."
 
   root:

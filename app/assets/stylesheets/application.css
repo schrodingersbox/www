@@ -8,9 +8,23 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require reset
- *= require default
+ *= require bootstrap
  *
  *= require_self
  *= require_tree .
 */
+
+#logo {
+    width: 98px;
+    height: 80px;
+}
+
+#footer {
+    border-top: 1px solid #cacaca;
+    padding-top: 8px;
+    font-size: xx-small;
+}
+
+#footer .container {
+    text-align: center;
+}

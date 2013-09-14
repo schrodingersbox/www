@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= t( :title, :scope => :application ) %></title>
-  <%= stylesheet_link_tag 'application', :media => 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-    <div id="header">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : t( :title, :scope => :application ) %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t( :title, :scope => :application ) %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/navigation' %>
+
+  <main role="main">
       <div class="container">
-        <%= image_tag 'logo.png', :id =>'logo', :class => 'clear' %>
-        <div class="block">
-          <span id="title"><%= t( :title, :scope => :application ) %></span>
-          <span id="tag"><%= t( :tag, :scope => :application ) %></span>
+        <div class="content">
+           <div class="row">
+            <div class="span12">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+          <footer>
+          </footer>
         </div>
       </div>
-      <br class="clear"/>
-    </div>
-    <div id="page">
-      <div class="container">
-        <%= yield %>
-      </div>
-    </div>
+    </main>
+
     <div id="footer">
       <div class="container">
         <span><%= t( :copyright_html, :scope => :application, :year => Date.today.year ) %></span>
       </div>
     </div>
     <%= javascript_include_tag 'application' %>
-</body>
+
+  </body>
 </html>
