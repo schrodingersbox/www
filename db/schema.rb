@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908055849) do
+ActiveRecord::Schema.define(version: 20130913232440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,5 +25,60 @@ ActiveRecord::Schema.define(version: 20130908055849) do
   end
 
   add_index "meter_cat_meters", ["created_on", "name"], name: "index_meter_cat_meters_on_created_on_and_name", unique: true, using: :btree
+
+  create_table "split_cat_experiments", force: true do |t|
+    t.string   "name",        null: false
+    t.string   "description"
+    t.integer  "winner_id"
+    t.datetime "created_at"
+  end
+
+  add_index "split_cat_experiments", ["name"], name: "index_split_cat_experiments_on_name", unique: true, using: :btree
+
+  create_table "split_cat_goal_subjects", force: true do |t|
+    t.integer  "goal_id"
+    t.integer  "subject_id"
+    t.integer  "experiment_id"
+    t.integer  "hypothesis_id"
+    t.datetime "created_at"
+  end
+
+  add_index "split_cat_goal_subjects", ["experiment_id"], name: "index_split_cat_goal_subjects_on_experiment_id", using: :btree
+  add_index "split_cat_goal_subjects", ["goal_id", "subject_id"], name: "index_split_cat_gs_on_goal_id_and_subject_id", unique: true, using: :btree
+
+  create_table "split_cat_goals", force: true do |t|
+    t.integer  "experiment_id"
+    t.string   "name",          null: false
+    t.string   "description"
+    t.datetime "created_at"
+  end
+
+  add_index "split_cat_goals", ["experiment_id", "name"], name: "index_split_cat_goals_on_experiment_id_and_name", unique: true, using: :btree
+
+  create_table "split_cat_hypotheses", force: true do |t|
+    t.integer  "experiment_id"
+    t.string   "name",          null: false
+    t.string   "description"
+    t.integer  "weight"
+    t.datetime "created_at"
+  end
+
+  add_index "split_cat_hypotheses", ["experiment_id", "name"], name: "index_split_cat_hypotheses_on_experiment_id_and_name", unique: true, using: :btree
+
+  create_table "split_cat_hypothesis_subjects", force: true do |t|
+    t.integer  "hypothesis_id"
+    t.integer  "subject_id"
+    t.integer  "experiment_id"
+    t.datetime "created_at"
+  end
+
+  add_index "split_cat_hypothesis_subjects", ["experiment_id", "subject_id"], name: "index_split_cat_hs_on_experiment_id_and_subject_id", unique: true, using: :btree
+
+  create_table "split_cat_subjects", force: true do |t|
+    t.string   "token"
+    t.datetime "created_at"
+  end
+
+  add_index "split_cat_subjects", ["token"], name: "index_split_cat_subjects_on_token", unique: true, using: :btree
 
 end

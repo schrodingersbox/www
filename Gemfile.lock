@@ -14,6 +14,14 @@ GIT
     spec_cat (0.1.0)
 
 GIT
+  remote: https://github.com/schrodingersbox/split_cat.git
+  revision: fcabc3abe769416aaea4b9b733684d7d71c6a6bf
+  tag: v0.0.5
+  specs:
+    split_cat (0.0.5)
+      rails (~> 4.0.0)
+
+GIT
   remote: https://github.com/schrodingersbox/status_cat.git
   revision: c412487d3e8cdf173f4147f575461e80b9bfd6ac
   tag: v0.0.4
@@ -167,6 +175,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   simplecov (= 0.6.4)
   spec_cat!
+  split_cat!
   status_cat!
   turbolinks
   uglifier (>= 1.3.0)

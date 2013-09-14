@@ -19,6 +19,9 @@ en:
     spec_cat:
       title: "SpecCat"
       description: "A Ruby gem with rspec helpers and matchers."
+    split_cat:
+      title: "SplitCat"
+      description: "A Rails engine for split testing."
     status_cat:
       title: "StatusCat"
       description: "A Rails engine for checking system status."

@@ -50,6 +50,7 @@ Www::Application.routes.draw do
 
   mount StatusCat::Engine => '/status_cat'
   mount MeterCat::Engine => '/meter_cat'
+  mount SplitCat::Engine => '/split_cat'
 
   # See how all your routes lay out with "rake routes"
 
