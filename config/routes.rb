@@ -46,15 +46,17 @@ Www::Application.routes.draw do
   #     resources :products
   #   end
 
+  mount StatusCat::Engine => '/status_cat/demo'
+  mount MeterCat::Engine => '/meter_cat/demo'
+  mount SplitCat::Engine => '/split_cat/demo'
+
   root :to => 'root#index'
 
-  mount StatusCat::Engine => '/status_cat'
-  mount MeterCat::Engine => '/meter_cat'
-  mount SplitCat::Engine => '/split_cat'
+  get ':controller(/:action(/:id))'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  #match ':controller(/:action(/:id))(.:format)'
 end

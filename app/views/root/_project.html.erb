@@ -1,6 +1,9 @@
 <h2><%=  t( :title, :scope => [ :projects, name ] ) %></h2>
 <p><%=  t( :description, :scope => [ :projects, name ] ) %></p>
 <ul>
+  <li>
+    <%= link_to t( :learn_more, :scope => [ :root, :index ] ), :controller => name  %>
+  </li>
 
   <% if github %>
       <li>

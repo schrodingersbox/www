@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/schrodingersbox/meter_cat.git
-  revision: db3d4575b65a8eeaa7ed2c009964a1db317ca1c6
-  tag: v0.0.2
+  revision: d10284b5f2add791baeacbc98f6ae1662e880b71
+  tag: v0.0.3
   specs:
-    meter_cat (0.0.2)
+    meter_cat (0.0.3)
       rails (~> 4.0.0)
 
 GIT

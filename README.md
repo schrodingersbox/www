@@ -16,4 +16,4 @@
 
 ## TODO
 
- * Add routing specs for engines
+ * Add "Learn more" link and page for each project
