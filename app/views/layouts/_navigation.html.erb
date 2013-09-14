@@ -21,7 +21,9 @@
       <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/">Home</a></li>
+      <% css = request.fullpath == '/' ? 'active' : '' %>
+      <% name = t( :home, :scope => :application ) %>
+      <%= content_tag( :li, link_to( name, '/' ), :class => css ) %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

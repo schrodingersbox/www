@@ -5,11 +5,10 @@ en:
   application:
     title: "Schrödinger's Box"
     copyright_html: "&copy; %{year} Schrödinger's Box. All rights reserved."
-
-  root:
-    index:
-      github: "GitHub"
-      demo: "Demo"
+    home: Home
+    github: "GitHub"
+    demo: "Demo"
+    learn_more: Learn more
 
   projects:
     meter_cat:

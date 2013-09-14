@@ -15,8 +15,8 @@
 */
 
 #logo {
-    width: 98px;
-    height: 80px;
+    width: 49px;
+    height: 40px;
 }
 
 #footer {
@@ -27,4 +27,15 @@
 
 #footer .container {
     text-align: center;
+}
+
+.project {
+}
+
+.project .line {
+    border-top: 1px solid #cacaca;
+}
+
+.project p {
+    padding-left: 16px;
 }

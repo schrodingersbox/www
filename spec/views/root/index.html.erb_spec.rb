@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'root/index.html.erb' do
 
   before( :all ) do
-    @github = t( :github, :scope => [ :root, :index ] )
-    @demo = t( :demo, :scope => [ :root, :index ] )
+    @github = t( :github, :scope => :application )
+    @demo = t( :demo, :scope => :application )
 
     @spec_cat_title = t( :title, :scope => [ :projects, :spec_cat ] )
     @spec_cat_description = t( :description, :scope => [ :projects, :spec_cat ] )

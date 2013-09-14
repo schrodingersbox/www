@@ -8,7 +8,7 @@ describe RootHelper do
       @name = :status_cat
       @github = 'https://github.com/schrodingersbox/status_cat'
       @demo = '/status_cat'
-      @expected = { :partial => 'project', :locals => { :name => @name, :github => @github, :demo => @demo } }
+      @expected = { :partial => 'root/project', :locals => { :name => @name, :github => @github, :demo => @demo } }
     end
 
     it 'renders the project partial with the given locals' do

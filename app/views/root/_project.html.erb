@@ -1,21 +1,11 @@
-<h2><%= t( :title, :scope => [ :projects, name ] ) %></h2>
-<p><%= t( :description, :scope => [ :projects, name ] ) %></p>
-<ul>
-  <li>
-    <%= link_to t( :learn_more, :scope => [ :root, :index ] ), :controller => name  %>
-  </li>
+<div class="project col-md-6">
+    <div class="line"></div>
+    <h2><%= t( :title, :scope => [ :projects, name ] ) %></h2>
+    <p><%= t( :description, :scope => [ :projects, name ] ) %></p>
+    <p>
+      <%= link_to t( :learn_more, :scope => :application ), :controller => name  %>
+      <%= raw !github ? '' : ' | ' + link_to( t( :github, :scope => :application ), github ) %>
+      <%= raw !demo ? '' : '| ' + link_to( t( :demo, :scope => :application ), demo ) %>
+    </p>
+</div>
 
-  <% if github %>
-      <li>
-        <%= link_to t( :github, :scope => [ :root, :index ] ), github %>
-      </li>
-  <% end %>
-
-
-  <% if demo %>
-      <li>
-        <%= link_to t( :demo, :scope => [ :root, :index ] ), demo %>
-      </li>
-  <% end %>
-
-</ul>
