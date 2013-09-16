@@ -1,3 +1,8 @@
 <h1><%= t( :title, :scope => [ :projects, :meter_cat ] ) %></h1>
 <p><%= t( :description, :scope => [ :projects, :meter_cat ] ) %></p>
 
+<p>
+  <%= link_to( t( :github, :scope => :application ), METER_CAT_GITHUB_URL ) %>
+  |
+<%= link_to( t( :demo, :scope => :application ), meter_cat_path ) %>
+</p>
