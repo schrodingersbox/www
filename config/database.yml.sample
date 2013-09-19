@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: www_development
+  database: schrodinger_www_development
   pool: 5
   username: schrodinger
   password: password
@@ -17,7 +17,7 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: www_test
+  database: schrodinger_www_test
   pool: 5
   username: schrodinger
   password: password
@@ -25,7 +25,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: www_production
+  database: schrodinger_www_production
   pool: 5
   username: schrodinger
   password: password
