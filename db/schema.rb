@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130913232440) do
+ActiveRecord::Schema.define(version: 20130919074714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20130913232440) do
   end
 
   add_index "meter_cat_meters", ["created_on", "name"], name: "index_meter_cat_meters_on_created_on_and_name", unique: true, using: :btree
+
+  create_table "report_cat_date_ranges", force: true do |t|
+    t.date   "start_date"
+    t.date   "stop_date"
+    t.string "period"
+  end
+
+  add_index "report_cat_date_ranges", ["period", "start_date", "stop_date"], name: "index_report_cat_date_ranges_on_period_and_dates", unique: true, using: :btree
+  add_index "report_cat_date_ranges", ["period", "start_date"], name: "index_report_cat_date_ranges_on_period_and_start_date", unique: true, using: :btree
+  add_index "report_cat_date_ranges", ["period", "stop_date"], name: "index_report_cat_date_ranges_on_period_and_stop_date", unique: true, using: :btree
 
   create_table "split_cat_experiments", force: true do |t|
     t.string   "name",        null: false

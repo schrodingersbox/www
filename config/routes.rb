@@ -49,6 +49,7 @@ Www::Application.routes.draw do
   mount StatusCat::Engine => '/status_cat/demo'
   mount MeterCat::Engine => '/meter_cat/demo'
   mount SplitCat::Engine => '/split_cat/demo'
+  mount ReportCat::Engine => '/report_cat/demo'
 
   root :to => 'root#index'
 

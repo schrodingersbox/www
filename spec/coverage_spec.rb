@@ -13,6 +13,7 @@ describe 'coverage' do
       'app/helpers',
       'app/mailers',
       'app/models',
+      'app/reports',
       'app/views',
       'lib'
     ].each do |dir|

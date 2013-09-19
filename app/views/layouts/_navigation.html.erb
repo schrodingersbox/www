@@ -13,7 +13,7 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <% [ :meter_cat, :spec_cat, :split_cat, :status_cat ].each do |project| %>
+      <% [ :meter_cat, :report_cat, :spec_cat, :split_cat, :status_cat ].each do |project| %>
           <% css = request.fullpath.include?( project.to_s ) ? 'active' : '' %>
           <% action = "/#{project}" %>
           <% name = t( :title, :scope => [ :projects, project ] ) %>

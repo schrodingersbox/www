@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'status_cat', :tag => 'v0.0.4', :git => 'https://github.com/schrodingersbox/status_cat.git'
 gem 'meter_cat', :tag => 'v0.0.3', :git => 'https://github.com/schrodingersbox/meter_cat.git'
 gem 'split_cat', :tag => 'v0.0.5', :git => 'https://github.com/schrodingersbox/split_cat.git'
+gem 'report_cat', :tag => 'v0.0.1', :git => 'https://github.com/schrodingersbox/report_cat.git'
 
 group :production do
   gem 'newrelic_rpm'
@@ -32,6 +33,12 @@ group :development, :test do
   gem 'simplecov', '0.6.4', :require => false
   gem 'spec_cat', :tag => 'v1.0.0', :git => 'https://github.com/schrodingersbox/spec_cat.git'
   gem 'webrat', '0.7.3'
+
+  gem 'autotest'
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
+  gem 'autotest-rails'
+  gem 'autotest-standalone'
 end
 
 

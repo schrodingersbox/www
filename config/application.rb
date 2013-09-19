@@ -50,5 +50,7 @@ module Www
 
     # http://www.erikminkel.com/2013/09/01/twitter-bootstrap-3-in-a-rails-4-application/
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
+    Dir[Rails.root + 'app/reports/**/*.rb'].each { |path| require path }
   end
 end

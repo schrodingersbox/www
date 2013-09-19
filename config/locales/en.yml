@@ -14,6 +14,9 @@ en:
     meter_cat:
       title: "MeterCat"
       description: "A Rails engine for monitoring system activities over time."
+    report_cat:
+      title: "ReportCat"
+      description: "A Rails engine to generate simple reports with charts."
     spec_cat:
       title: "SpecCat"
       description: "A Ruby gem with rspec helpers and matchers."
@@ -23,3 +26,11 @@ en:
     status_cat:
       title: "StatusCat"
       description: "A Rails engine for checking system status."
+
+  report_cat:
+    charts:
+      bar_chart: Bar Chart
+    instances:
+      meter_report:
+        name: Meter Report
+        description: A date range report of the root_index meter
