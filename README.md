@@ -11,3 +11,6 @@
 ## TODO
 
  * Add "Learn more" link and page for each project
+ * Spec routing
+ * Add latest version of each gem / engine
+ * Set up travis-ci

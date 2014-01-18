@@ -11,10 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919074714) do
+ActiveRecord::Schema.define(version: 20140118025738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "landing_cat_campaigns", force: true do |t|
+    t.string   "utmcsr"
+    t.string   "utmcmd"
+    t.string   "utmctr"
+    t.string   "utmcct"
+    t.string   "utmccn"
+    t.string   "utmgclid"
+    t.datetime "created_at"
+  end
+
+  add_index "landing_cat_campaigns", ["utmcsr", "utmcmd", "utmctr", "utmcct", "utmccn", "utmgclid"], name: "index_landing_cat_campaigns_on_everything", unique: true, using: :btree
+
+  create_table "landing_cat_leads", force: true do |t|
+    t.string   "email",       null: false
+    t.integer  "campaign_id"
+    t.integer  "page_id"
+    t.datetime "created_at"
+  end
+
+  add_index "landing_cat_leads", ["campaign_id"], name: "index_landing_cat_leads_on_campaign_id", using: :btree
+  add_index "landing_cat_leads", ["email"], name: "index_landing_cat_leads_on_email", unique: true, using: :btree
+  add_index "landing_cat_leads", ["page_id"], name: "index_landing_cat_leads_on_page_id", using: :btree
+
+  create_table "landing_cat_pages", force: true do |t|
+    t.string "name",                       null: false
+    t.string "experiment_id",   limit: 64
+    t.string "experiment_key",  limit: 64
+    t.string "experiment_type", limit: 1
+    t.string "heading"
+    t.string "prompt"
+    t.string "call_to_action"
+    t.text   "body"
+  end
+
+  add_index "landing_cat_pages", ["name"], name: "index_landing_cat_pages_on_name", unique: true, using: :btree
 
   create_table "meter_cat_meters", force: true do |t|
     t.string   "name",         limit: 64,             null: false

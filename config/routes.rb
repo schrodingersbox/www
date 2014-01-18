@@ -46,6 +46,8 @@ Www::Application.routes.draw do
   #     resources :products
   #   end
 
+  mount LandingCat::Engine => '/landing'
+
   mount StatusCat::Engine => '/status_cat/demo'
   mount MeterCat::Engine => '/meter_cat/demo'
   mount SplitCat::Engine => '/split_cat/demo'

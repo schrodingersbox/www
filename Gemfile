@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 gem 'pg'
 gem 'jquery-rails'
 
+gem 'landing_cat', :tag => 'v0.0.1', :git => 'https://github.com/schrodingersbox/landing_cat.git'
 gem 'status_cat', :tag => 'v0.0.4', :git => 'https://github.com/schrodingersbox/status_cat.git'
 gem 'meter_cat', :tag => 'v0.0.3', :git => 'https://github.com/schrodingersbox/meter_cat.git'
 gem 'split_cat', :tag => 'v0.0.5', :git => 'https://github.com/schrodingersbox/split_cat.git'
@@ -31,7 +32,7 @@ group :development, :test do
   gem 'rspec', '2.14.1'
   gem 'rspec-rails', '2.14.0'
   gem 'simplecov', '0.6.4', :require => false
-  gem 'spec_cat', :tag => 'v1.0.0', :git => 'https://github.com/schrodingersbox/spec_cat.git'
+  gem 'spec_cat', :tag => 'v1.0.2', :git => 'https://github.com/schrodingersbox/spec_cat.git'
   gem 'webrat', '0.7.3'
 
   gem 'autotest'

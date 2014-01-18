@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe '/layouts/application.html.erb' do
 
+  helper LandingCat::GoogleAnalyticsHelper
+
   it 'renders without exception' do
     render
   end
